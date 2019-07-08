@@ -41,8 +41,8 @@ func main() {
 		port = "8080"
 	}
 
-	// err := http.ListenAndServeTLS(":8080", "server.crt", "server.key", router)
-	err := http.ListenAndServe(fmt.Sprintf(":%s", port), router)
+	err := http.ListenAndServeTLS(":8080", "server.crt", "server.key", router)
+	// err := http.ListenAndServe(fmt.Sprintf(":%s", port), router)
 
 	if err != nil {
 		fmt.Print(err)
